@@ -1,0 +1,28 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix form: <http://deductions-software.com/ontologies/forms.owl.ttl#> .
+@prefix     : <http://deductions-software.com/ontologies/forms.owl.ttl#> .
+@prefix     oxi: <http://omerxi.co/ontologies/core.owl.ttl#> .
+
+# form specifications for oxi:Driver
+
+<driverForm>
+  form:classDomain oxi:Driver ;
+  form:showProperties (
+	# nom, téléphone, voiture, langues, compétences, photo
+	foaf:name 
+	foaf:phone # literal or resource
+	oxi:carBrand
+	oxi:carModel
+	oxi:language
+	oxi:skills
+	foaf:img
+  ) .
+
+<completion1>
+	:fieldAppliesToForm <driverForm> ;
+	:fieldAppliesToProperty oxi:skills ;
+	:widgetClass form:DBPediaLookup .
+
+
