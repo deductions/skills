@@ -9,6 +9,7 @@
 
 <driverForm>
   form:classDomain oxi:Driver ;
+  form:defaultCardinality form:zeroOrOne ;
   form:showProperties (
 	# nom, téléphone, voiture, langues, compétences, photo
 	foaf:name 
